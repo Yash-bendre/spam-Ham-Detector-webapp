@@ -1,0 +1,81 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9); /* Unique soft gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #b2dfdb;
+  padding-bottom: 10px;
+}
+
+.form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form input[type="submit"] {
+  background-color: #00796b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #004d40;
+}
+
+.result-box {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9fbe7;
+  border: 1px solid #cddc39;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.label-ham {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.label-spam {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.user-msg {
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-style: italic;
+}

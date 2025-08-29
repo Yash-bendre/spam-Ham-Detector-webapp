@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Spam Detector</h2>
+
+    <form action="/prediction" method="POST" class="form">
+        <input type="text" name="message" placeholder="Enter Your Message">
+        <input type="submit" value="Check">
+    </form>
+
+    {% if result %}
+      <div class="result-box">
+        <h3>
+          Prediction: 
+          {% if result == "Ham" %}
+            <span class="label-ham">{{ result }}</span>
+          {% else %}
+            <span class="label-spam">{{ result }}</span>
+          {% endif %}
+        </h3>
+
+        <p><strong>Confidence:</strong> {{ confidence }}</p>
+        <p>Ham: {{ prob_ham }} | Spam: {{ prob_spam }}</p>
+        <p><strong>Your Message:</strong></p>
+        <div class="user-msg">{{ message }}</div>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
